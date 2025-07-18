@@ -1,4 +1,4 @@
-This project develops a "Deep Research" application that automates the process of conducting in-depth web research and generating detailed reports, with an option to email the final output. The system is built using an agentic framework powered by Google's Gemini models and orchestrated by a `ResearchManager` class.
+This project develops an application that automates the process of conducting in-depth web research and generating detailed reports, with an option to email the final output. The multi-agent system is built using an agentic framework powered by Google's Gemini models and orchestrated by a `ResearchManager` class.
 
 Key components and their functionalities include:
 
@@ -14,5 +14,3 @@ Key components and their functionalities include:
 * **Writer Agent (`writer_agent.py`):** A "senior researcher" agent (`WriterAgent`) responsible for compiling the raw search summaries into a cohesive, lengthy, and detailed markdown report. It also generates a short summary and suggests follow-up questions for further research. The output is structured as `ReportData`.
 * **Email Agent (`email_agent.py`):** An agent (`Email agent`) tasked with sending a nicely formatted HTML email. It leverages a `send_email` function tool, which uses SendGrid to deliver the report content via email.
 * **LLM Integration:** All agents (`planner_agent`, `search_agent`, `writer_agent`, `email_agent`) primarily use Google's Gemini models (specifically `gemini-2.5-flash-preview-05-20` and `gemini-2.0-flash`) via `AsyncOpenAI` and `OpenAIChatCompletionsModel` for their reasoning and generation capabilities.
-
-The project aims to provide an automated, multi-agent system for efficient and comprehensive research, culminating in a presentable report.
