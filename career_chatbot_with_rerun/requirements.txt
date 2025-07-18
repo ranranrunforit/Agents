@@ -1,5 +1,0 @@
-requests
-gradio
-PyPDF2
-openai
-openai-agents
