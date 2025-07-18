@@ -1,0 +1,11 @@
+langgraph 
+python-dotenv 
+gradio 
+langchain-google-genai 
+langchain-experimental
+langchain_community
+playwright
+lxml
+nest_asyncio
+beautifulsoup4
+wikipedia
