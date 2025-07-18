@@ -1,4 +1,4 @@
-This project develops a chatbot application using Gradio, designed to execute tasks based on user requests and predefined success criteria. The system integrates various tools and an internal evaluation mechanism to ensure effective and self-correcting operation. 
+This project develops a chatbot application using Gradio, designed to execute tasks based on user requests, leverage tools, and self-correct to meet predefined success criteria. The system integrates various tools and an internal evaluation mechanism to ensure effective and self-correcting operation. 
 
 The core components and functionalities of the Sidekick project include:
 * **Gradio User Interface:** The `app.py` file sets up a Gradio-based web interface, featuring a chatbot display, input fields for user messages and success criteria, and buttons for initiating tasks ("Go!") and resetting the conversation. 
@@ -16,5 +16,3 @@ The core components and functionalities of the Sidekick project include:
     * **Python REPL:** A `PythonREPLTool` allows the agent to execute Python code. 
 * **Graph-based Workflow:** The system's logic is built using `langgraph.graph.StateGraph`, defining a flow where the worker generates responses, which are then routed to tools if needed, or to the evaluator for assessment. Based on the evaluation, the process either loops back to the worker for refinement or terminates. 
 * **Resource Management:** The application includes functions to set up and free resources, specifically closing the Playwright browser and stopping the Playwright instance when no longer needed, ensuring efficient resource utilization. 
-
-The project aims to create an intelligent and autonomous personal co-worker that can understand tasks, leverage tools, and self-correct to meet specified success criteria.
