@@ -1,4 +1,4 @@
-This project develops an application that automates the process of conducting in-depth web research and generating detailed reports, with an option to email the final output. The multi-agent system is built using an agentic framework powered by Google's Gemini models and orchestrated by a `ResearchManager` class.
+This project develops an application that automates the process of conducting in-depth web research, generating detailed reports, and emailing the final output. The multi-agent system is built using an agentic framework powered by Google's Gemini models and orchestrated by a `ResearchManager` class.
 
 Key components and their functionalities include:
 
