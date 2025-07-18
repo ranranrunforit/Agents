@@ -1,13 +1,18 @@
-This project implements a Gradio-based chatbot designed to represent "Chaoran Zhou" and answer questions related to their career, background, skills, and experience. The chatbot leverages large language models (LLMs) from OpenRouter (specifically `meta-llama/llama-3.3-8b-instruct:free`) for conversational responses and Google's Gemini API (`gemini-2.5-flash-preview-05-20`) for an internal evaluation mechanism.
+This project develops a "Deep Research" application that automates the process of conducting in-depth web research and generating detailed reports, with an option to email the final output. The system is built using an agentic framework powered by Google's Gemini models and orchestrated by a `ResearchManager` class.
 
-Key features of the project include:
+Key components and their functionalities include:
 
-* **Personalized Responses:** The chatbot is configured with a detailed system prompt that includes a summary and LinkedIn profile content of "Chaoran Zhou" to ensure accurate and in-character responses.
-* **Tool Integration:** It utilizes custom tools:
-    * `record_user_details`: To capture user email and name for follow-up, steering conversations towards contact.
-    * `record_unknown_question`: To log any questions the chatbot cannot answer, regardless of their topic.
-* **Self-Correction Mechanism:** An internal "evaluator" LLM (Gemini) assesses the quality and acceptability of the chatbot's responses. If a response is deemed unacceptable, the chatbot attempts to regenerate a better response based on the evaluator's feedback.
-* **Gradio Interface:** A user-friendly chat interface is provided using Gradio, allowing for interactive conversations with the AI agent.
-* **Pushover Notifications:** The `push` function is integrated to send notifications via Pushover for recorded user details or unanswered questions, providing a real-time alert system.
+* **Gradio User Interface (`app.py`):** Provides a simple and interactive web interface for users to submit a research query and view the generated report. The interface is designed for ease of use, with a text box for queries and a button to initiate the research process.
+* **Research Manager (`research_manager.py`):** This central orchestrator manages the entire research workflow, breaking it down into sequential steps.
+    * **`plan_searches`:** Utilizes the `planner_agent` to generate a comprehensive plan of web searches based on the user's initial query. It determines the most relevant search terms and the reasoning behind each.
+    * **`perform_searches`:** Executes the planned searches concurrently using `asyncio`. For each search item from the plan, it calls the `search_agent` to perform the web search and summarize the results concisely.
+    * **`write_report`:** Once all searches are completed, it uses the `writer_agent` to synthesize the summarized search results into a detailed, lengthy markdown report.
+    * **`send_email`:** After the report is written, it optionally uses the `email_agent` to format the markdown report into a clean HTML email and send it to a predefined recipient.
+    * **Tracing:** Integrates tracing capabilities (`trace` and `gen_trace_id`) to allow for monitoring the research process on a platform like OpenAI Traces.
+* **Planner Agent (`planner_agent.py`):** A specialized agent (`PlannerAgent`) that takes a research query and generates a list of specific web search terms along with a reason for each search. It is configured to output a `WebSearchPlan` containing multiple `WebSearchItem` objects, ensuring a structured approach to initial information gathering.
+* **Search Agent (`search_agent.py`):** An agent (`Search agent`) designed to perform a single web search given a term. It utilizes a `WebSearchTool` and is instructed to produce a concise, 2-3 paragraph summary (less than 300 words) of the search results, focusing on main points and omitting fluff.
+* **Writer Agent (`writer_agent.py`):** A "senior researcher" agent (`WriterAgent`) responsible for compiling the raw search summaries into a cohesive, lengthy, and detailed markdown report. It also generates a short summary and suggests follow-up questions for further research. The output is structured as `ReportData`.
+* **Email Agent (`email_agent.py`):** An agent (`Email agent`) tasked with sending a nicely formatted HTML email. It leverages a `send_email` function tool, which uses SendGrid to deliver the report content via email.
+* **LLM Integration:** All agents (`planner_agent`, `search_agent`, `writer_agent`, `email_agent`) primarily use Google's Gemini models (specifically `gemini-2.5-flash-preview-05-20` and `gemini-2.0-flash`) via `AsyncOpenAI` and `OpenAIChatCompletionsModel` for their reasoning and generation capabilities.
 
-The project aims to create a professional and engaging AI representative that can faithfully answer inquiries about "Chaoran Zhou" while maintaining quality control and facilitating user engagement.
+The project aims to provide an automated, multi-agent system for efficient and comprehensive research, culminating in a presentable report.
