@@ -18,7 +18,6 @@ This project demonstrates a Research Agent workflow using the OpenAI Agents SDK.
 - **Asyncio:** For asynchronous execution of search and report tasks
 
 
-****
 **[Career Conversation with Rerun](./career_conversation_with_rerun)**
 
 This project implements a professional chatbot web application using Gradio, OpenAI, and Pushover APIs. The chatbot represents AI representative and answers questions about his career, background, and experience. It loads profile and summary data from local files and uses the OpenAI GPT-4o-mini model for conversation. The app supports function calling for two tools: recording user contact details and logging unanswered questions. Push notifications are sent via the Pushover API when these tools are triggered.
