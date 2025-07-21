@@ -1,8 +1,8 @@
 ## Agent workflow projects
 
-**[Deep Research Agent](./research_chat)**
+**[Research Chat](./research_chat)**
 
-This project demonstrates a **Deep Research Agent** workflow using the OpenAI Agents SDK. The agent automates the process of planning, executing, and synthesizing web research, then delivers the results via email.
+This project demonstrates a OpenAI Research Agent workflow using the OpenAI Agents SDK. The agent automates the process of planning, executing, and synthesizing web research, then delivers the results via email.
 
 #### Key Features & Workflow
 
@@ -25,13 +25,7 @@ This project demonstrates a **Deep Research Agent** workflow using the OpenAI Ag
 
 - **OpenAI Agents SDK:**  
   - `Agent`, `WebSearchTool`, `Runner`, `trace`, `function_tool`
-- **Pydantic:**  
-  - For defining structured outputs (`BaseModel`, `Field`)
 - **SendGrid:**  
   - For sending emails (`sendgrid.SendGridAPIClient`, `Mail`, `Email`, `To`, `Content`)
 - **Asyncio:**  
   - For asynchronous execution of search and report tasks
-- **IPython.display:**  
-  - For displaying markdown in notebooks
-
-This agentic workflow showcases how modern AI frameworks can automate complex research tasks, synthesize information, and communicate results efficiently.
