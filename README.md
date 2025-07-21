@@ -1,5 +1,23 @@
 ## Agent Workflow Projects
 
+
+**[Sidekick Personal Coworker](./sidekick_personal_coworker)**
+
+These files implement an advanced agentic assistant using LangGraph and LangChain. The assistant can autonomously complete tasks, use external tools (like web browsing and Python code execution), and iteratively improve its work based on evaluator feedback and user-defined success criteria.
+
+- **`sidekick.py`** defines the agent's workflow, state management, and evaluation logic. It builds a stateful graph with nodes for working, tool usage, and evaluation, allowing the assistant to loop until the task is complete or more user input is needed.
+- **`sidekick_tools.py`** provides tool definitions (such as Playwright-based web browsing and other custom tools) that the agent can invoke during its workflow.
+
+**Key Libraries and Functions Used:**
+- `langgraph`: For building stateful agent graphs (`StateGraph`, `ToolNode`, etc.).
+- `langchain_openai`: For LLM access (`ChatOpenAI`) and tool binding.
+- `langchain_core.messages`: For structured message handling (`SystemMessage`, `HumanMessage`, `AIMessage`).
+- `pydantic`: For structured output validation (`BaseModel`, `Field`).
+- `playwright_tools`, `other_tools`: Custom tool definitions for agent actions.
+- `dotenv`: Loads environment variables for configuration.
+- `asyncio`, `uuid`, `datetime`: For async operations, unique IDs, and time-stamping.
+
+
 **[Research Chat](./research_chat)**
 
 This project demonstrates a Research Agent workflow using the OpenAI Agents SDK. The agent automates the process of planning, executing, and synthesizing web research, then delivers the results via email.
