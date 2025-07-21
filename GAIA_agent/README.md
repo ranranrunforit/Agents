@@ -1,4 +1,4 @@
-This project implements a tool-augmented AI agent, demonstrating how to set up a development environment, integrate external knowledge bases via vector stores, define and utilize various tools, and orchestrate complex reasoning workflows using LangGraph and large language models. The project focuses on creating a robust question-answering system capable of utilizing various tools and a vector database for enhanced retrieval.
+This project implements a tool-augmented AI agent, demonstrating how to set up a development environment, integrate external knowledge bases via vector stores, define and utilize various tools, and orchestrate complex reasoning workflows using LangGraph and large language models. The project creates a robust question-answering system capable of utilizing various tools and a vector database for enhanced retrieval.
 
 Key aspects of the project include:
 
