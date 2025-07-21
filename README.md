@@ -12,9 +12,7 @@ These files implement an advanced agentic assistant using LangGraph and LangChai
 - `langgraph`: For building stateful agent graphs (`StateGraph`, `ToolNode`, etc.).
 - `langchain_openai`: For LLM access (`ChatOpenAI`) and tool binding.
 - `langchain_core.messages`: For structured message handling (`SystemMessage`, `HumanMessage`, `AIMessage`).
-- `pydantic`: For structured output validation (`BaseModel`, `Field`).
 - `playwright_tools`, `other_tools`: Custom tool definitions for agent actions.
-- `dotenv`: Loads environment variables for configuration.
 - `asyncio`, `uuid`, `datetime`: For async operations, unique IDs, and time-stamping.
 
 
@@ -31,9 +29,9 @@ This project demonstrates a Research Agent workflow using the OpenAI Agents SDK.
 
 #### Libraries & Functions Used
 
-- **OpenAI Agents SDK:** `Agent`, `WebSearchTool`, `Runner`, `trace`, `function_tool`
-- **SendGrid:** For sending emails (`sendgrid.SendGridAPIClient`, `Mail`, `Email`, `To`, `Content`)
-- **Asyncio:** For asynchronous execution of search and report tasks
+- `OpenAI Agents SDK`: `Agent`, `WebSearchTool`, `Runner`, `trace`, `function_tool`
+- `SendGrid`: For sending emails (`sendgrid.SendGridAPIClient`, `Mail`, `Email`, `To`, `Content`)
+- `Asyncio`: For asynchronous execution of search and report tasks
 
 
 **[Career Conversation with Rerun](./career_conversation_with_rerun)**
