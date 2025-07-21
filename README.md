@@ -1,6 +1,21 @@
 ## Agent Workflow Projects
 
 
+**[Research Chat](./research_chat)**
+
+Research Chat is an AI-powered research assistant designed to help users explore topics interactively through a chat interface. The application leverages the Gemini language model for generating insightful responses and integrates web search capabilities to provide up-to-date information.
+
+Key libraries used:
+- `Gradio`: Builds the web-based chat UI.
+- `LangChain`, `LangGraph`: Orchestrate complex conversational flows and manage agent logic.
+- `Google-GenAI`, `langchain-google-genai`: Accesses the Gemini language model for advanced natural language understanding and generation.
+- `DuckDuckGo-Search`: Enables real-time web search to supplement AI-generated answers.
+- `Requests`: Handles HTTP requests for external APIs.
+- `dotenv`: Loads environment variables for configuration.
+- `Pydantic`, `typing-extensions`: Provide data validation and type support.
+
+
+
 **[Sidekick Personal Coworker](./sidekick_personal_coworker)**
 
 These files implement an advanced agentic assistant using LangGraph and LangChain. The assistant can autonomously complete tasks, use external tools (like web browsing and Python code execution), and iteratively improve its work based on evaluator feedback and user-defined success criteria.
@@ -16,7 +31,7 @@ These files implement an advanced agentic assistant using LangGraph and LangChai
 - `asyncio`, `uuid`, `datetime`: For async operations, unique IDs, and time-stamping.
 
 
-**[Research Chat](./research_chat)**
+**[Deep Research](./deep_research)**
 
 This project demonstrates a Research Agent workflow using the OpenAI Agents SDK. The agent automates the process of planning, executing, and synthesizing web research, then delivers the results via email.
 
