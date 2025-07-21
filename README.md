@@ -5,7 +5,7 @@
 
 Research Chat is an AI-powered research assistant designed to help users explore topics interactively through a chat interface. The application leverages the Gemini language model for generating insightful responses and integrates web search capabilities to provide up-to-date information.
 
-Key libraries used:
+**Key Libraries Used:**
 - `Gradio`: Builds the web-based chat UI.
 - `LangChain`, `LangGraph`: Orchestrate complex conversational flows and manage agent logic.
 - `Google-GenAI`, `langchain-google-genai`: Accesses the Gemini language model for advanced natural language understanding and generation.
