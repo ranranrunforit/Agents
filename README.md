@@ -18,7 +18,7 @@ Research Chat is an AI-powered research assistant designed to help users explore
 
 **[Sidekick Personal Coworker](./sidekick_personal_coworker)**
 
-These files implement an advanced agentic assistant using LangGraph and LangChain. The assistant can autonomously complete tasks, use external tools (like web browsing and Python code execution), and iteratively improve its work based on evaluator feedback and user-defined success criteria.
+These files implement an agentic assistant using LangGraph and LangChain. The assistant can autonomously complete tasks, use external tools (like web browsing and Python code execution), and iteratively improve its work based on evaluator feedback and user-defined success criteria.
 
 - **`sidekick.py`** defines the agent's workflow, state management, and evaluation logic. It builds a stateful graph with nodes for working, tool usage, and evaluation, allowing the assistant to loop until the task is complete or more user input is needed.
 - **`sidekick_tools.py`** provides tool definitions (such as Playwright-based web browsing and other custom tools) that the agent can invoke during its workflow.
