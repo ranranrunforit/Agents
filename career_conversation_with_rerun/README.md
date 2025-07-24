@@ -1,4 +1,4 @@
-This project implements a Gradio-based chatbot designed to represent a professional and engaging AI representative that can faithfully answer questions related to their career, background, skills, and experience. The chatbot leverages large language models (LLMs) from OpenRouter (specifically `meta-llama/llama-3.3-8b-instruct:free`) for conversational responses and Google's Gemini API (`gemini-2.5-flash-preview-05-20`) for an internal evaluation mechanism.
+This project implements a Gradio-based chatbot designed to represent a professional and engaging an AI representative that can faithfully answer questions related to their career, background, skills, and experience. The chatbot leverages large language models (LLMs) from OpenRouter (specifically `meta-llama/llama-3.3-8b-instruct:free`) for conversational responses and Google's Gemini API (`gemini-2.5-flash-preview-05-20`) for an internal evaluation mechanism.
 
 Key features of the project include:
 
