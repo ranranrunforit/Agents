@@ -31,7 +31,7 @@ These files implement an agentic assistant using LangGraph and LangChain. The as
 - `asyncio`, `uuid`, `datetime`: For async operations, unique IDs, and time-stamping.
 
 
-**[Deep Research](./deep_research)**
+**[Deep Research (OpenAI Agents SDK)](./deep_research)**
 
 This project demonstrates a Research Agent workflow using the OpenAI Agents SDK. The agent automates the process of planning, executing, and synthesizing web research, then delivers the results via email.
 
