@@ -26,6 +26,18 @@ This project leverages the LangSmith platform for tracing, evaluating, and manag
 - `SKLearnVectorStore`: A scikit-learn based vector store is used for the RAG application's document retrieval component.
 
 
+**[LangGraph Reasearch Agent](./langsmith_basic)**
+
+This repository build, configure, and deploy AI-powered research assistants using the LangGraph framework. The project is structured into modules that progressively build upon each other, and demonstrates the power of modular, configurable, and versioned agents for real-world task management scenarios.
+
+**Libraries:**
+- `LangGraph`: Define the structure of applications as stateful graphs with nodes and edges.
+- `LangChain`: `langchain-google-genai` for LLM integrations, `langchain-core` for foundational data structures like messages, and `langchain-community` for tools like TavilySearchResults.
+- `LangSmith`: It is used to monitor application performance, manage datasets, and run experiments.
+- `Tavily`: An AI-native search engine used as a tool within the agent to perform web searches.
+- `Pydantic`: Used for data validation and defining structured schemas for graph states.
+
+
 **[Research Chat](./research_chat)**
 
 Research Chat is an AI-powered research assistant designed to help users explore topics interactively through a chat interface. The application leverages the Gemini language model for generating insightful responses and integrates web search capabilities to provide up-to-date information.
