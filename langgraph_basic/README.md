@@ -79,7 +79,6 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 - **`research_assistant.ipynb`**:  
   Combines previous concepts to build a multi-agent research assistant, integrating parallelization, sub-graphs, and memory.
 
----
 
 ## Module 5: Long-Term Memory
 
