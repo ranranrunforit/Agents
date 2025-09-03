@@ -4,7 +4,7 @@
 
 **[Email Assistant with LangGraph](./ambient_agent)**
 
-This project implements an email assistant built. It follows a structured, multi-stage development process that starts with a basic agent architecture and progressively adds layers of evaluation, human oversight, and long-term memory. The agent can triage incoming emails, generate context-aware responses, learn from user feedback, and allow for human intervention before executing critical tasks.
+This project implements an email assistant. The agent can triage incoming emails, generate context-aware responses, learn from user feedback, and allow for human intervention before executing critical tasks. It follows a structured, multi-stage development process that starts with a basic agent architecture and progressively adds layers of evaluation, human oversight, and long-term memory. 
 
 **Libraries:**
 
