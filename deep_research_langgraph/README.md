@@ -37,10 +37,11 @@ The project is developed progressively across several notebooks, culminating in 
 ## Directory Structure
 
 ```
-- `notebooks`: **Source of truth**. Contains all tutorial notebooks and utility scripts.
-- `deep_research_from_scratch`: **Generated code**. All `.py` files here are written by the notebooks via `%%writefile`.
-- `files/`: Sample research documents for local MCP server access.
-- `langgraph.json`: LangGraph workflow configuration.
-- `pyproject.toml`: Project dependencies.
+
+notebooks/                                # notebooks and utility scripts
+src/deep_research_from_scratc/            # Generated code. All `.py` files here are written by the notebooks via `%%writefile`.
+langgraph.json/                            # LangGraph workflow configuration.
+pyproject.toml/                            # Project dependencies
+
 ```
 
