@@ -1,22 +1,23 @@
 
 This project builds, evaluates, and improves an email assistant. The assistant is designed to automate email management by triaging incoming messages and generating appropriate responses. The project is broken down into four key notebooks that cover the entire lifecycle of developing a robust AI agent.
 
-Key Features and Concepts
+Key Features and their functionalities include:
+
 1. Foundational Concepts (`langgraph_101.ipynb`)
 
-This notebook introduces the fundamental concepts of LangGraph. It explains how to construct agents and workflows by defining a `State`, creating `Nodes` to update that state, and connecting them with `Edges` to control the flow of logic. It also covers the basics of using tools, persistence with checkpointers, and deploying a LangGraph application.
+  This notebook introduces the fundamental concepts of LangGraph. It explains how to construct agents and workflows by defining a `State`, creating `Nodes` to update that state, and connecting them with `Edges` to control the flow of logic. It also covers the basics of using tools, persistence with checkpointers, and deploying a LangGraph application.
 
 2. Building the Core Agent (`agent.ipynb`)
 
-Here, the primary architecture of the email assistant is built. It consists of:
+  Here, the primary architecture of the email assistant is built. It consists of:
 
-A Triage Router: This initial node analyzes an incoming email and classifies it as `respond`, `ignore`, or `notify` using an LLM with structured output capabilities.
+  A Triage Router: This initial node analyzes an incoming email and classifies it as `respond`, `ignore`, or `notify` using an LLM with structured output capabilities.
 
-A Response Agent: If an email needs a reply, it is passed to this agent, which is a sub-graph that operates in a loop. The agent uses a set of predefined tools like `write_email`, `schedule_meeting`, and `check_calendar_availability` to fulfill the user's request.
+  A Response Agent: If an email needs a reply, it is passed to this agent, which is a sub-graph that operates in a loop. The agent uses a set of predefined tools like `write_email`, `schedule_meeting`, and `check_calendar_availability` to fulfill the user's request.
 
 3. Evaluating the Agent (`evaluation.ipynb`)
 
-This notebook focuses on testing the agent's performance. It showcases two main evaluation methods:
+  This notebook focuses on testing the agent's performance. It showcases two main evaluation methods:
 
 Pytest Integration: Writing tests using `pytest` and the `@pytest.mark.langsmith` decorator to run specific test cases and log the results to a LangSmith project.
 
