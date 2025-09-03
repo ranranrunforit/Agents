@@ -1,6 +1,6 @@
 This project using LangSmith to develop, test, and monitor LLM applications in production. It implements a RAG (Retrieval Augmented Generation) system that answers questions about LangSmith documentation.
 
-## Module Structure
+## Structure
 
 ### Module 0: Setup
 - **0_rag_application.ipynb**: Sets up basic RAG application using Google's Gemini model with LangSmith tracing enabled
