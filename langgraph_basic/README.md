@@ -2,13 +2,13 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 
 ## Structure
 
-### Module 0: Basics
+### [Module 0: Basics](./module-0-setup)
 
 - **`basics.ipynb`**:  
   Introduces LangGraph, its motivation, and the course structure. Explains the need for graph-based agent control and sets up the environment for subsequent modules.
 
 
-### Module 1: Foundations
+### [Module 1: Foundations](./module-1-intro)
 
 - **`simple_graph.ipynb`**:  
   Builds a minimal graph with three nodes and a conditional edge, demonstrating the basics of graph construction in LangGraph.
@@ -26,7 +26,7 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
   Covers deploying LangGraph applications locally and to LangGraph Cloud, including integration with LangSmith and Studio.
 
 
-### Module 2: State and Memory
+### [Module 2: State and Memory](./module-2-state-and-memory)
 
 - **`state_schema.ipynb`**:  
   Explains how to define and customize the state schema for graph nodes, enabling structured data flow.
@@ -47,7 +47,7 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
   Integrates external memory storage for chatbots, persisting conversation history and supporting long-term context.
 
 
-### Module 3: Human-in-the-Loop & Debugging
+### [Module 3: Human-in-the-Loop & Debugging](./module-3-ux-and-human-in-the-loop)
 
 - **`breakpoints.ipynb`**:  
   Introduces breakpoints to pause graph execution for human approval, enabling human-in-the-loop workflows.
@@ -65,7 +65,7 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
   Shows how to rewind and replay graph execution for debugging and reproducibility.
 
 
-### Module 4: Multi-Agent & Research Assistant
+### [Module 4: Multi-Agent & Research Assistant](./module-4-research-assistant)
 
 - **`parallelization.ipynb`**:  
   Demonstrates parallel node execution for multi-agent workflows, improving efficiency and scalability.
@@ -80,7 +80,7 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
   Combines previous concepts to build a multi-agent research assistant, integrating parallelization, sub-graphs, and memory.
 
 
-## Module 5: Long-Term Memory
+## [Module 5: Long-Term Memory](./module-5-long-term-memory)
 
 - **`memory_store.ipynb`**:  
   Introduces the LangGraph Memory Store for persistent, cross-thread memory using key-value stores (e.g., Postgres, Redis).
@@ -95,7 +95,7 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
   Builds an agent with long-term memory, capable of updating user profiles, ToDo collections, and its own instructions.
 
 
-### Module 6: Deployment & Assistants
+### [Module 6: Deployment & Assistants](./module-6-deployment)
 
 - **`assistant.ipynb`**:  
   Demonstrates the use of LangGraph "assistants"—versioned, configurable agents. Shows how to create, update, search, and delete assistants using the SDK, and how to interact with them for different task categories (e.g., personal vs. work ToDos).
