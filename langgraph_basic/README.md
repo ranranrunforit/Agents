@@ -1,4 +1,4 @@
-The project builds and manages AI-powered reasearch assistants using LangGraph. It creates modular, configurable, and versioned assistants that can manage tasks, interact with users, and maintain persistent state. The project is structured into modules, each focusing on a specific concept or feature of LangGraph.
+The project builds and manages LLM-powered assistants using LangGraph. It creates modular, configurable, and versioned assistants that can manage tasks, interact with users, and maintain persistent state. The project is structured into modules, each focusing on a specific concept or feature of LangGraph.
 
 ## Structure
 
