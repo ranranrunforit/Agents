@@ -7,12 +7,12 @@ This project implements an email assistant. The agent can triage incoming emails
 
 **Libraries:**
 
-- `LangGraph`: build the email assistant as a stateful graph. The agent's logic is defined as a series of nodes (functions) and edges (control flow) that operate on a persistent state object.
-- `LangChain`: interface with Large Language Models (LLMs). The chosen model is Google's `gemini-2.0-flash`.
-- `LangSmith`: for testing, debugging, and evaluating the agent. It provides tools for creating datasets, running evaluations, and tracing the agent's execution paths.
-- `Pytest`: to write and run evaluation tests that are logged to LangSmith.
-- `Pydantic`: define structured data schemas for the agent's tools and forcreating structured outputs from the LLM.
-- `html2text`: for parsing email content.
+- `LangGraph`: Build the email assistant as a stateful graph. The agent's logic is defined as a series of nodes (functions) and edges (control flow) that operate on a persistent state object.
+- `LangChain`: Interface with Large Language Models (LLMs). The chosen model is Google's `gemini-2.0-flash`.
+- `LangSmith`: For testing, debugging, and evaluating the agent. It provides tools for creating datasets, running evaluations, and tracing the agent's execution paths.
+- `Pytest`: To write and run evaluation tests that are logged to LangSmith.
+- `Pydantic`: Define structured data schemas for the agent's tools and forcreating structured outputs from the LLM.
+- `html2text`: For parsing email content.
 
 
 **[LangSmith Tracing and Evaluation](./langsmith_basic)**
