@@ -103,6 +103,9 @@ The project builds and manages LLM-powered assistants using LangGraph. It create
 - **`connecting.ipynb`**:  
   Explains connecting to a deployed LangGraph server, using the SDK to interact with threads, runs, and the memory store.
 
+- **`double-texting.ipynb`**:
+  Explores strategies for handling "double texting"—when a user sends multiple messages before the previous run completes—in chat-based applications.
+
 
 ### Studio Integration
 
