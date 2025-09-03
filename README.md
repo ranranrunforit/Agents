@@ -1,4 +1,4 @@
-## Agent Workflow Projects
+## Agent/Workflow Projects
 
 
 **[Email Assistant with LangGraph](./ambient_agent)**
