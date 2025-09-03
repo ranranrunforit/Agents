@@ -26,7 +26,7 @@ This project leverages the LangSmith platform for tracing, evaluating, and manag
 - `SKLearnVectorStore`: A scikit-learn based vector store is used for the RAG application's document retrieval component.
 
 
-**[LangGraph Agent](./langsmith_basic)**
+**[LangGraph Assistant_Agent](./langgraph_basic)**
 
 This repository build, configure, and deploy AI-powered personal/work assistants using the LangGraph framework. The project is structured into modules that progressively build upon each other, and demonstrates the power of modular, configurable, and versioned agents for real-world task management scenarios.
 
