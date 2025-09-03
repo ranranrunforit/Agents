@@ -1,19 +1,4 @@
-Collecting workspace informationHere's a markdown summary of the LangSmith project:
-
-# LangSmith Basic Tutorial Project
-
-## Overview
-This project demonstrates how to use LangSmith for building, testing and monitoring LLM applications. It implements a RAG (Retrieval Augmented Generation) system that answers questions about LangSmith documentation.
-
-## Key Libraries Used
-- `langchain-google-genai`: For Google's Gemini LLM integration
-- `langgraph`: For building graph-based LLM applications 
-- `langsmith`: For tracing, monitoring and evaluating LLM applications
-- `langchain-community`: For community components
-- `langchain-core`: Core LangChain functionality
-- `scikit-learn`: For vector storage and retrieval
-- `pandas`: For data manipulation
-- `google.generativeai`: Google's Generative AI API
+This project using LangSmith to develop, test, and monitor LLM applications in production. It implements a RAG (Retrieval Augmented Generation) system that answers questions about LangSmith documentation.
 
 ## Module Structure
 
@@ -62,4 +47,3 @@ module_4_collecting.../    # Feedback collection
 module_5_production.../    # Production monitoring
 ```
 
-The project serves as a comprehensive tutorial for using LangSmith to develop, test, and monitor LLM applications in production.
