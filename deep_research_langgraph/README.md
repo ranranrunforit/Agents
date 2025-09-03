@@ -13,9 +13,8 @@ The project is developed progressively across several notebooks, culminating in 
  
 
 * **Agent Integration (`3_research_agent_mcp.ipynb`)**
-    * The project also explores integration patterns by demonstrating how to wrap a research agent as a Model-as-Controller Protocol (MCP) server.
+    * This notebook explores integration patterns by wraping a research agent as a Model-as-Controller Protocol (MCP) server.
     * This turns the entire agent into a callable tool, enabling more complex, hierarchical agent structures where a supervisor can delegate tasks to specialized sub-agents.
-    * This notebook also shows integrations with multiple LLM providers, including Anthropic and OpenAI models.
 
 
 * **Research Supervisor (`4_research_supervisor.ipynb`)**
@@ -38,10 +37,10 @@ The project is developed progressively across several notebooks, culminating in 
 ## Directory Structure
 
 ```
-- notebooks: **Source of truth**. Contains all tutorial notebooks and utility scripts.
-- deep_research_from_scratch: **Generated code**. All `.py` files here are written by the notebooks via `%%writefile`.
+- `notebooks`: **Source of truth**. Contains all tutorial notebooks and utility scripts.
+- `deep_research_from_scratch`: **Generated code**. All `.py` files here are written by the notebooks via `%%writefile`.
 - `files/`: Sample research documents for local MCP server access.
-- langgraph.json: LangGraph workflow configuration.
-- pyproject.toml: Project dependencies.
+- `langgraph.json`: LangGraph workflow configuration.
+- `pyproject.toml`: Project dependencies.
 ```
 
