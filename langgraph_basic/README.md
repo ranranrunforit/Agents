@@ -113,10 +113,4 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 
 Each module contains a `studio/` directory with a langgraph.json file, mapping graph names to Python files for use with [LangGraph Studio](https://github.com/langchain-ai/langgraph-studio), enabling visual editing and deployment.
 
----
 
-## Summary
-
-This project provides a comprehensive, practical introduction to building, debugging, and deploying LLM-powered agentic applications with LangGraph. It covers foundational graph concepts, state and memory management, human-in-the-loop workflows, multi-agent orchestration, persistent memory, and cloud deployment, all with hands-on code examples and real-world use cases.
-
----
