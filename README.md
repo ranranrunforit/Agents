@@ -1,7 +1,6 @@
 ## Agent Workflow Projects
 
 
-
 **[Email Assistant with LangGraph](./ambient_agent)**
 
 This project implements an email assistant. The agent can triage incoming emails, generate context-aware responses, learn from user feedback, and allow for human intervention before executing critical tasks. It follows a structured, multi-stage development process that starts with a basic agent architecture and progressively adds layers of evaluation, human oversight, and long-term memory. 
@@ -15,6 +14,16 @@ This project implements an email assistant. The agent can triage incoming emails
 - `Pydantic`: define structured data schemas for the agent's tools and forcreating structured outputs from the LLM.
 - `html2text`: for parsing email content.
 
+
+**[LangSmith Tracing and Evaluation](./langsmith_basic)**
+
+This project leverages the LangSmith platform for tracing, evaluating, and managing LLM applications. It uses LangSmith's features through a Retrieval-Augmented Generation (RAG) application built with LangChain and LangGraph. The project covers a full cycle of LLM application development, from basic tracing to advanced evaluation and prompt management.
+
+**Libraries:**
+- `LangSmith`: The central platform for the entire project, used for LLM observability and evaluation.
+- `LangChain` & `LangGraph`: These frameworks are used to build the underlying RAG application that is traced and evaluated. The project uses the langchain-google-genai integration to work with Google's Gemini models.
+- `Pydantic`: This library is used for data validation and creating structured output schemas for LLM-as-judge evaluators.
+- `SKLearnVectorStore`: A scikit-learn based vector store is used for the RAG application's document retrieval component.
 
 
 **[Research Chat](./research_chat)**
@@ -34,7 +43,7 @@ Research Chat is an AI-powered research assistant designed to help users explore
 
 **[Sidekick Personal Coworker](./sidekick_personal_coworker)**
 
-These files implement an agentic assistant using LangGraph and LangChain. The assistant can autonomously complete tasks, use external tools (like web browsing and Python code execution), and iteratively improve its work based on evaluator feedback and user-defined success criteria.
+This project implement an agentic assistant using LangGraph and LangChain. The assistant can autonomously complete tasks, use external tools (like web browsing and Python code execution), and iteratively improve its work based on evaluator feedback and user-defined success criteria.
 
 - **`sidekick.py`** defines the agent's workflow, state management, and evaluation logic. It builds a stateful graph with nodes for working, tool usage, and evaluation, allowing the assistant to loop until the task is complete or more user input is needed.
 - **`sidekick_tools.py`** provides tool definitions (such as Playwright-based web browsing and other custom tools) that the agent can invoke during its workflow.
