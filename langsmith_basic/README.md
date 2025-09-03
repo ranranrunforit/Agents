@@ -38,7 +38,7 @@ This project using LangSmith to develop, test, and monitor LLM applications in p
 
 ## Project Structure
 ```
-images/                    # Tutorial diagrams and images
+images/                    # Diagrams and images
 module_0_setup/            # Initial setup and basic RAG
 module_1_visibility.../    # Tracing implementation
 module_2_testing.../       # Testing and evaluation
