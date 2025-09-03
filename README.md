@@ -15,6 +15,18 @@ This project implements an email assistant. The agent can triage incoming emails
 - `html2text`: For parsing email content.
 
 
+**[Multi-Agent Web Research Assistant](./deep_research_langgraph)**
+
+This project develops a research assistant using a multi-agent, "plan-and-execute" architecture. The system is designed to take a user's research query, break it down into a structured plan, execute web searches to gather information, and synthesize the findings into a comprehensive report. The entire workflow is orchestrated using the LangGraph framework and powered by Google's Gemini LLMs.
+
+**Libraries:**
+
+- `LangGraph`: The core framework used to build and orchestrate the multi-agent system. The project leverages `StateGraph` to create stateful, cyclical workflows that manage the interactions between different agents.
+- `LangChain`: The project utilizes the broader LangChain ecosystem, including `langchain-google-genai` for interfacing with Google's Gemini models. 
+- `Tavily`: The `TavilySearchResults` tool is integrated to provide the research agent with robust, real-time web search capabilities.
+- `Pydantic` & `TypedDict`: Python's `TypedDict` is used to define the state schema (`AgentState`) that is passed between the different nodes and agents in the graph.
+
+
 **[LangSmith Tracing and Evaluation](./langsmith_basic)**
 
 This project leverages the LangSmith platform for tracing, evaluating, and managing LLM applications. It uses LangSmith's features through a Retrieval-Augmented Generation (RAG) application built with LangChain and LangGraph. The project covers a full cycle of LLM application development, from basic tracing to advanced evaluation and prompt management.
