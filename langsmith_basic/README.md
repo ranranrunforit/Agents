@@ -7,6 +7,7 @@ This project using LangSmith to develop, test, and monitor LLM applications in p
 
 ### [Module 1: Visibility While Building with Tracing](./module_1_visibility_while_building_with_tracing)
 - **`1_tracing_basics.ipynb`**: Introduction to tracing concepts in LangSmith
+- **`2_types_of_runs`**: Different ways to implement tracing
 - **`3_alternative_tracing_methods.ipynb`**: Different ways to implement tracing
 - **`4_conversational_threads.ipynb`**: Managing conversation threads with tracing
 
