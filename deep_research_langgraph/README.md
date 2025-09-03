@@ -38,10 +38,10 @@ The project is developed progressively across several notebooks, culminating in 
 
 ```
 
-notebooks/                                # notebooks and utility scripts
+notebooks/                                # Notebooks and utility scripts
 src/deep_research_from_scratc/            # Generated code. All `.py` files here are written by the notebooks via `%%writefile`.
-langgraph.json/                            # LangGraph workflow configuration.
-pyproject.toml/                            # Project dependencies
+langgraph.json                            # LangGraph workflow configuration.
+pyproject.toml                            # Project dependencies
 
 ```
 
