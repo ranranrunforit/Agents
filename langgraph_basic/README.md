@@ -1,13 +1,14 @@
 The project builds and manages AI-powered assistants using LangGraph. It creates modular, configurable, and versioned assistants that can manage tasks, interact with users, and maintain persistent state. The project is structured into modules, each focusing on a specific concept or feature of LangGraph.
 
-## Module 0: Basics
+## Structure
+
+### Module 0: Basics
 
 - **`basics.ipynb`**:  
   Introduces LangGraph, its motivation, and the course structure. Explains the need for graph-based agent control and sets up the environment for subsequent modules.
 
----
 
-## Module 1: Foundations
+### Module 1: Foundations
 
 - **`simple_graph.ipynb`**:  
   Builds a minimal graph with three nodes and a conditional edge, demonstrating the basics of graph construction in LangGraph.
@@ -24,9 +25,8 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 - **`deployment.ipynb`**:  
   Covers deploying LangGraph applications locally and to LangGraph Cloud, including integration with LangSmith and Studio.
 
----
 
-## Module 2: State and Memory
+### Module 2: State and Memory
 
 - **`state_schema.ipynb`**:  
   Explains how to define and customize the state schema for graph nodes, enabling structured data flow.
@@ -46,9 +46,8 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 - **`chatbot_external_memory.ipynb`**:  
   Integrates external memory storage for chatbots, persisting conversation history and supporting long-term context.
 
----
 
-## Module 3: Human-in-the-Loop & Debugging
+### Module 3: Human-in-the-Loop & Debugging
 
 - **`breakpoints.ipynb`**:  
   Introduces breakpoints to pause graph execution for human approval, enabling human-in-the-loop workflows.
@@ -65,9 +64,8 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 - **`time_travel.ipynb`**:  
   Shows how to rewind and replay graph execution for debugging and reproducibility.
 
----
 
-## Module 4: Multi-Agent & Research Assistant
+### Module 4: Multi-Agent & Research Assistant
 
 - **`parallelization.ipynb`**:  
   Demonstrates parallel node execution for multi-agent workflows, improving efficiency and scalability.
@@ -97,9 +95,8 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 - **`memory_agent.ipynb`**:  
   Builds an agent with long-term memory, capable of updating user profiles, ToDo collections, and its own instructions.
 
----
 
-## Module 6: Deployment & Assistants
+### Module 6: Deployment & Assistants
 
 - **`assistant.ipynb`**:  
   Demonstrates the use of LangGraph "assistants"—versioned, configurable agents. Shows how to create, update, search, and delete assistants using the SDK, and how to interact with them for different task categories (e.g., personal vs. work ToDos).
@@ -107,9 +104,8 @@ The project builds and manages AI-powered assistants using LangGraph. It creates
 - **`connecting.ipynb`**:  
   Explains connecting to a deployed LangGraph server, using the SDK to interact with threads, runs, and the memory store.
 
----
 
-## Studio Integration
+### Studio Integration
 
 Each module contains a `studio/` directory with a langgraph.json file, mapping graph names to Python files for use with [LangGraph Studio](https://github.com/langchain-ai/langgraph-studio), enabling visual editing and deployment.
 
