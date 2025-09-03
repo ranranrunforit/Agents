@@ -1,6 +1,22 @@
 ## Agent Workflow Projects
 
 
+
+**[Email Assistant with LangGraph](./ambient_agent)**
+
+This project implements an email assistant built. It follows a structured, multi-stage development process that starts with a basic agent architecture and progressively adds layers of evaluation, human oversight, and long-term memory. The agent can triage incoming emails, generate context-aware responses, learn from user feedback, and allow for human intervention before executing critical tasks.
+
+**Libraries:**
+
+- `LangGraph`: build the email assistant as a stateful graph. The agent's logic is defined as a series of nodes (functions) and edges (control flow) that operate on a persistent state object.
+- `LangChain`: interface with Large Language Models (LLMs). The chosen model is Google's `gemini-2.0-flash`.
+- `LangSmith`: for testing, debugging, and evaluating the agent. It provides tools for creating datasets, running evaluations, and tracing the agent's execution paths.
+- `Pytest`: to write and run evaluation tests that are logged to LangSmith.
+- `Pydantic`: define structured data schemas for the agent's tools and forcreating structured outputs from the LLM.
+- `html2text`: for parsing email content.
+
+
+
 **[Research Chat](./research_chat)**
 
 Research Chat is an AI-powered research assistant designed to help users explore topics interactively through a chat interface. The application leverages the Gemini language model for generating insightful responses and integrates web search capabilities to provide up-to-date information.
