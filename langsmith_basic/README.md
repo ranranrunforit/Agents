@@ -1,34 +1,65 @@
-# Intro to LangSmith
+Collecting workspace informationHere's a markdown summary of the LangSmith project:
 
-Welcome to Intro to LangSmith!
+# LangSmith Basic Tutorial Project
 
-## Introduction
-In this course we will walk through the fundamentals of LangSmith - exploring observability, prompt engineering, evaluations, feedback mechanisms, and production monitoring. Take a look at the setup instructions below so you can follow along with any of our notebook examples.
+## Overview
+This project demonstrates how to use LangSmith for building, testing and monitoring LLM applications. It implements a RAG (Retrieval Augmented Generation) system that answers questions about LangSmith documentation.
 
----
+## Key Libraries Used
+- `langchain-google-genai`: For Google's Gemini LLM integration
+- `langgraph`: For building graph-based LLM applications 
+- `langsmith`: For tracing, monitoring and evaluating LLM applications
+- `langchain-community`: For community components
+- `langchain-core`: Core LangChain functionality
+- `scikit-learn`: For vector storage and retrieval
+- `pandas`: For data manipulation
+- `google.generativeai`: Google's Generative AI API
 
-## Setup
-Follow these instructions to make sure you have all the resources necessary for this course!
+## Module Structure
 
-### Sign up for LangSmith
-* Sign up [here](https://smith.langchain.com/) 
-* Navigate to the Settings page, and generate an API key in LangSmith.
-* Create a .env file that mimics the provided .env.example. Set `LANGCHAIN_API_KEY` in the .env file.
+### Module 0: Setup
+- **0_rag_application.ipynb**: Sets up basic RAG application using Google's Gemini model with LangSmith tracing enabled
 
-### Set OpenAI API key
-* If you don't have an OpenAI API key, you can sign up [here](https://openai.com/index/openai-api/).
-* Set `OPENAI_API_KEY` in the .env file.
+### Module 1: Visibility While Building with Tracing
+- **1_tracing_basics.ipynb**: Introduction to tracing concepts in LangSmith
+- **3_alternative_tracing_methods.ipynb**: Different ways to implement tracing
+- **4_conversational_threads.ipynb**: Managing conversation threads with tracing
 
-### Create an environment and install dependencies
+### Module 2: Testing and Evaluation
+- **1_dataset_upload.ipynb**: How to upload and manage datasets in LangSmith
+- **2_evaluators.ipynb**: Creating custom evaluators for LLM outputs
+- **3_experiments.ipynb**: Running experiments with different model configurations
+- **4_pairwise_experiments.ipynb**: Comparing different model/prompt pairs
+- **5_summary_evaluators.ipynb**: Building evaluators for summarization tasks
+
+### Module 3: Prompt Engineering
+- **1_playground_experiments.ipynb**: Experimenting with prompts in LangSmith
+- **2_prompt_hub.ipynb**: Using the LangSmith Prompt Hub
+- **3_prompt_engineering_lifecycle.ipynb**: End-to-end prompt development workflow
+
+### Module 4: Collecting Human Feedback
+- **publishing_feedback.ipynb**: How to collect and publish human feedback on model outputs
+
+### Module 5: Production Observability
+- **1_filtering.ipynb**: Filtering and analyzing production traces
+- **2_online_evaluation.ipynb**: Real-time evaluation of production models
+
+## Key Features
+- Implements RAG using LangSmith documentation as knowledge base
+- Demonstrates tracing and monitoring capabilities
+- Shows how to evaluate and test LLM applications
+- Covers prompt engineering workflow
+- Includes production monitoring features
+
+## Project Structure
 ```
-$ cd intro-to-langsmith
-$ python3 -m venv intro-to-ls
-$ source intro-to-ls/bin/activate
-$ pip install -r requirements.txt
+images/                    # Tutorial diagrams and images
+module_0_setup/            # Initial setup and basic RAG
+module_1_visibility.../    # Tracing implementation
+module_2_testing.../       # Testing and evaluation
+module_3_prompt.../        # Prompt engineering
+module_4_collecting.../    # Feedback collection
+module_5_production.../    # Production monitoring
 ```
 
-### Self-Hosted LangSmith
-Note: If you are using a self-hosted version of LangSmith, you'll need to set this environment variable in addition to the others - see this [guide](https://docs.smith.langchain.com/self_hosting/usage) for more info
-```
-LANGSMITH_ENDPOINT = "<your-self-hosted-url>/api/v1"
-```
+The project serves as a comprehensive tutorial for using LangSmith to develop, test, and monitor LLM applications in production.
