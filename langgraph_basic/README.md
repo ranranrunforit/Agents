@@ -1,14 +1,4 @@
-This project is a hands-on course for building agentic and multi-agent applications using [LangGraph](https://github.com/langchain-ai/langgraph), a Python library for constructing, controlling, and deploying LLM-powered workflows as graphs. The course is structured into modules, each focusing on a specific concept or capability of LangGraph, and uses Jupyter notebooks (`.ipynb`) for interactive learning.
-
-## Libraries Used
-
-- **LangGraph**: Core library for graph-based LLM workflows.
-- **LangChain**: For LLMs, tools, and message handling.
-- **langgraph_sdk**: For interacting with deployed graphs and assistants.
-- **python-dotenv**: For environment variable management.
-- **Other dependencies**: e.g., `IPython.display`, `uuid`, and cloud SDKs as needed.
-
----
+The project builds and manages AI-powered assistants using LangGraph. It creates modular, configurable, and versioned assistants that can manage tasks, interact with users, and maintain persistent state. The project is structured into modules, each focusing on a specific concept or feature of LangGraph.
 
 ## Module 0: Basics
 
