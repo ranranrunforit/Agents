@@ -1,34 +1,132 @@
-# Intro to LangSmith
+This project is a hands-on course for building agentic and multi-agent applications using [LangGraph](https://github.com/langchain-ai/langgraph), a Python library for constructing, controlling, and deploying LLM-powered workflows as graphs. The course is structured into modules, each focusing on a specific concept or capability of LangGraph, and uses Jupyter notebooks (`.ipynb`) for interactive learning.
 
-Welcome to Intro to LangSmith!
+## Libraries Used
 
-## Introduction
-In this course we will walk through the fundamentals of LangSmith - exploring observability, prompt engineering, evaluations, feedback mechanisms, and production monitoring. Take a look at the setup instructions below so you can follow along with any of our notebook examples.
+- **LangGraph**: Core library for graph-based LLM workflows.
+- **LangChain**: For LLMs, tools, and message handling.
+- **langgraph_sdk**: For interacting with deployed graphs and assistants.
+- **python-dotenv**: For environment variable management.
+- **Other dependencies**: e.g., `IPython.display`, `uuid`, and cloud SDKs as needed.
 
 ---
 
-## Setup
-Follow these instructions to make sure you have all the resources necessary for this course!
+## Module 0: Basics
 
-### Sign up for LangSmith
-* Sign up [here](https://smith.langchain.com/) 
-* Navigate to the Settings page, and generate an API key in LangSmith.
-* Create a .env file that mimics the provided .env.example. Set `LANGCHAIN_API_KEY` in the .env file.
+- **basics.ipynb**:  
+  Introduces LangGraph, its motivation, and the course structure. Explains the need for graph-based agent control and sets up the environment for subsequent modules.
 
-### Set OpenAI API key
-* If you don't have an OpenAI API key, you can sign up [here](https://openai.com/index/openai-api/).
-* Set `OPENAI_API_KEY` in the .env file.
+---
 
-### Create an environment and install dependencies
-```
-$ cd intro-to-langsmith
-$ python3 -m venv intro-to-ls
-$ source intro-to-ls/bin/activate
-$ pip install -r requirements.txt
-```
+## Module 1: Foundations
 
-### Self-Hosted LangSmith
-Note: If you are using a self-hosted version of LangSmith, you'll need to set this environment variable in addition to the others - see this [guide](https://docs.smith.langchain.com/self_hosting/usage) for more info
-```
-LANGSMITH_ENDPOINT = "<your-self-hosted-url>/api/v1"
-```
+- **simple_graph.ipynb**:  
+  Builds a minimal graph with three nodes and a conditional edge, demonstrating the basics of graph construction in LangGraph.
+
+- **agent.ipynb**:  
+  Implements a simple agent that can act, observe, and reason using tools, showing how to integrate LLMs and tool calls in a graph.
+
+- **chain.ipynb**:  
+  Demonstrates chaining nodes for sequential processing, introducing the concept of chaining LLM calls and tool outputs.
+
+- **router.ipynb**:  
+  Shows how to route between different nodes based on input, using conditional logic to direct the flow in the graph.
+
+- **deployment.ipynb**:  
+  Covers deploying LangGraph applications locally and to LangGraph Cloud, including integration with LangSmith and Studio.
+
+---
+
+## Module 2: State and Memory
+
+- **state_schema.ipynb**:  
+  Explains how to define and customize the state schema for graph nodes, enabling structured data flow.
+
+- **state_reducers.ipynb**:  
+  Introduces state reducers for updating and managing state transitions within the graph.
+
+- **multiple_schemas.ipynb**:  
+  Demonstrates using multiple schemas for different nodes or stages, allowing for more flexible and modular graph design.
+
+- **trim_filter_messages.ipynb**:  
+  Shows advanced techniques for trimming and filtering messages in the graph state to manage memory and token usage.
+
+- **chatbot_summarization.ipynb**:  
+  Implements a chatbot that summarizes conversation history using LLMs, enabling long-running conversations with compressed memory.
+
+- **chatbot_external_memory.ipynb**:  
+  Integrates external memory storage for chatbots, persisting conversation history and supporting long-term context.
+
+---
+
+## Module 3: Human-in-the-Loop & Debugging
+
+- **breakpoints.ipynb**:  
+  Introduces breakpoints to pause graph execution for human approval, enabling human-in-the-loop workflows.
+
+- **dynamic_breakpoints.ipynb**:  
+  Expands on breakpoints with dynamic logic, allowing for conditional interruption and debugging.
+
+- **edit_state_human_feedback.ipynb**:  
+  Demonstrates editing graph state at breakpoints, incorporating human feedback and state modification during execution.
+
+- **streaming_interruption.ipynb**:  
+  Covers streaming outputs and interrupting execution, providing real-time feedback and control.
+
+- **time_travel.ipynb**:  
+  Shows how to rewind and replay graph execution for debugging and reproducibility.
+
+---
+
+## Module 4: Multi-Agent & Research Assistant
+
+- **parallelization.ipynb**:  
+  Demonstrates parallel node execution for multi-agent workflows, improving efficiency and scalability.
+
+- **sub_graph.ipynb**:  
+  Introduces sub-graphs for modular and hierarchical graph design, useful for complex multi-agent systems.
+
+- **map_reduce.ipynb**:  
+  Implements map-reduce patterns in LangGraph, enabling distributed processing and aggregation.
+
+- **research_assistant.ipynb**:  
+  Combines previous concepts to build a multi-agent research assistant, integrating parallelization, sub-graphs, and memory.
+
+---
+
+## Module 5: Long-Term Memory
+
+- **memory_store.ipynb**:  
+  Introduces the LangGraph Memory Store for persistent, cross-thread memory using key-value stores (e.g., Postgres, Redis).
+
+- **memoryschema_profile.ipynb**:  
+  Defines and uses a profile schema for storing user-specific long-term memory.
+
+- **memoryschema_collection.ipynb**:  
+  Implements a collection schema for managing lists of memories (e.g., ToDos) and demonstrates saving/retrieving them.
+
+- **memory_agent.ipynb**:  
+  Builds an agent with long-term memory, capable of updating user profiles, ToDo collections, and its own instructions.
+
+---
+
+## Module 6: Deployment & Assistants
+
+- **assistant.ipynb**:  
+  Demonstrates the use of LangGraph "assistants"—versioned, configurable agents. Shows how to create, update, search, and delete assistants using the SDK, and how to interact with them for different task categories (e.g., personal vs. work ToDos).
+
+- **connecting.ipynb**:  
+  Explains connecting to a deployed LangGraph server, using the SDK to interact with threads, runs, and the memory store.
+
+---
+
+## Studio Integration
+
+Each module contains a `studio/` directory with a langgraph.json file, mapping graph names to Python files for use with [LangGraph Studio](https://github.com/langchain-ai/langgraph-studio), enabling visual editing and deployment.
+
+---
+
+## Summary
+
+This project provides a comprehensive, practical introduction to building, debugging, and deploying LLM-powered agentic applications with LangGraph. It covers foundational graph concepts, state and memory management, human-in-the-loop workflows, multi-agent orchestration, persistent memory, and cloud deployment, all with hands-on code examples and real-world use cases.
+
+---
