@@ -37,7 +37,7 @@ This repository build, configure, and deploy LLM-powered personal/work assistant
 
 **Libraries:**
 - `LangGraph`: Define the structure of applications as stateful graphs with nodes and edges.
-- `LangChain`: `langchain-google-genai` for LLM integrations, `langchain-core` for foundational data structures like messages, and `langchain-community` for tools like TavilySearchResults.
+- `LangChain`: `langchain-google-genai` for LLM integrations, `langchain-core` for foundational data structures like messages, and `langchain-community` for tools like `TavilySearchResults`.
 - `LangSmith`: It is used to monitor application performance, manage datasets, and run experiments.
 - `Tavily`: An AI-native search engine used as a tool within the agent to perform web searches.
 - `Pydantic`: Used for data validation and defining structured schemas for graph states.
