@@ -33,7 +33,7 @@ This project develops a research assistant using a multi-agent, "plan-and-execut
 
 **[LangGraph Assistant_Agent](./langgraph_basic)**
 
-This repository build, configure, and deploy AI-powered personal/work assistants using the LangGraph framework. The project is structured into modules that progressively build upon each other, and demonstrates the power of modular, configurable, and versioned agents for real-world task management scenarios.
+This repository build, configure, and deploy LLM-powered personal/work assistants using the LangGraph framework. The project is structured into modules that progressively build upon each other, and demonstrates the power of modular, configurable, and versioned agents for real-world task management scenarios.
 
 **Libraries:**
 - `LangGraph`: Define the structure of applications as stateful graphs with nodes and edges.
