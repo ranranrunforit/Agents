@@ -29,17 +29,6 @@ This project develops a research assistant using a multi-agent, "plan-and-execut
 
 
 
-**[LangSmith Tracing and Evaluation](./langsmith_basic)**
-
-This project leverages the LangSmith platform for tracing, evaluating, and managing LLM applications. It uses LangSmith's features through a Retrieval-Augmented Generation (RAG) application built with LangChain and LangGraph. The project covers a full cycle of LLM application development, from basic tracing to advanced evaluation and prompt management.
-
-**Libraries:**
-- `LangSmith`: The central platform for the entire project, used for LLM observability and evaluation.
-- `LangChain` & `LangGraph`: These frameworks are used to build the underlying RAG application that is traced and evaluated. The project uses the langchain-google-genai integration to work with Google's Gemini models.
-- `Pydantic`: This library is used for data validation and creating structured output schemas for LLM-as-judge evaluators.
-- `SKLearnVectorStore`: A scikit-learn based vector store is used for the RAG application's document retrieval component.
-
-
 **[LangGraph Assistant_Agent](./langgraph_basic)**
 
 This repository build, configure, and deploy AI-powered personal/work assistants using the LangGraph framework. The project is structured into modules that progressively build upon each other, and demonstrates the power of modular, configurable, and versioned agents for real-world task management scenarios.
@@ -50,6 +39,18 @@ This repository build, configure, and deploy AI-powered personal/work assistants
 - `LangSmith`: It is used to monitor application performance, manage datasets, and run experiments.
 - `Tavily`: An AI-native search engine used as a tool within the agent to perform web searches.
 - `Pydantic`: Used for data validation and defining structured schemas for graph states.
+
+
+
+**[LangSmith Tracing and Evaluation](./langsmith_basic)**
+
+This project leverages the LangSmith platform for tracing, evaluating, and managing LLM applications. It uses LangSmith's features through a Retrieval-Augmented Generation (RAG) application built with LangChain and LangGraph. The project covers a full cycle of LLM application development, from basic tracing to advanced evaluation and prompt management.
+
+**Libraries:**
+- `LangSmith`: The central platform for the entire project, used for LLM observability and evaluation.
+- `LangChain` & `LangGraph`: These frameworks are used to build the underlying RAG application that is traced and evaluated. The project uses the langchain-google-genai integration to work with Google's Gemini models.
+- `Pydantic`: This library is used for data validation and creating structured output schemas for LLM-as-judge evaluators.
+- `SKLearnVectorStore`: A scikit-learn based vector store is used for the RAG application's document retrieval component.
 
 
 **[Research Chat](./research_chat)**
