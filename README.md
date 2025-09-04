@@ -1,6 +1,7 @@
 ## Agent/Workflow Projects
 
 
+
 **[Email Assistant with LangGraph](./ambient_agent)**
 
 This project implements an email assistant. The agent can triage incoming emails, generate context-aware responses, learn from user feedback, and allow for human intervention before executing critical tasks. It follows a structured, multi-stage development process that starts with a basic agent architecture and progressively adds layers of evaluation, human oversight, and long-term memory. 
@@ -13,6 +14,7 @@ This project implements an email assistant. The agent can triage incoming emails
 - `Pytest`: To write and run evaluation tests that are logged to LangSmith.
 - `Pydantic`: Define structured data schemas for the agent's tools and forcreating structured outputs from the LLM.
 - `html2text`: For parsing email content.
+
 
 
 **[Multi-Agent Web Research Assistant](./deep_research_langgraph)**
@@ -53,6 +55,7 @@ This project leverages the LangSmith platform for tracing, evaluating, and manag
 - `SKLearnVectorStore`: A scikit-learn based vector store is used for the RAG application's document retrieval component.
 
 
+
 **[Research Chat](./research_chat)**
 
 Research Chat is an AI-powered research assistant designed to help users explore topics interactively through a chat interface. The application leverages the Gemini language model for generating insightful responses and integrates web search capabilities to provide up-to-date information.
@@ -83,6 +86,7 @@ This project implement an agentic assistant using LangGraph and LangChain. The a
 - `asyncio`, `uuid`, `datetime`: For async operations, unique IDs, and time-stamping.
 
 
+
 **[Deep Research (OpenAI Agents SDK)](./deep_research)**
 
 This project demonstrates a Research Agent workflow using the OpenAI Agents SDK. The agent automates the process of planning, executing, and synthesizing web research, then delivers the results via email.
@@ -98,6 +102,7 @@ This project demonstrates a Research Agent workflow using the OpenAI Agents SDK.
 - `Asyncio`: For asynchronous execution of search and report tasks
 
 
+
 **[Career Conversation with Rerun](./career_conversation_with_rerun)**
 
 This project implements a professional chatbot web application using Gradio, OpenAI, and Pushover APIs. The chatbot represents AI representative and answers questions about his career, background, and experience. It loads profile and summary data from local files and uses the OpenAI GPT-4o-mini model for conversation. The app supports function calling for two tools: recording user contact details and logging unanswered questions. Push notifications are sent via the Pushover API when these tools are triggered.
@@ -107,6 +112,7 @@ This project implements a professional chatbot web application using Gradio, Ope
 - `openai` (`OpenAI`): Handles LLM chat completions and function calling.
 - `pypdf` (`PdfReader`): Reads and extracts text from PDF profile files.
 - `requests`: Sends push notifications to Pushover.
+
 
 
 **[GAIA Agent](./GAIA_agent)**
