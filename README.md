@@ -24,7 +24,7 @@ This project develops a research assistant using a multi-agent, "plan-and-execut
 **Libraries:**
 
 - `LangGraph`: Used to build and orchestrate the multi-agent system. The project leverages `StateGraph` to create stateful, cyclical workflows that manage the interactions between different agents.
-- `LangChain`: utilizes the broader LangChain ecosystem, including `langchain-google-genai` for interfacing with Google's Gemini models.
+- `LangChain`: To use the broader LangChain ecosystem, including `langchain-google-genai` for interfacing with Google's Gemini models.
 - `Tavily`: The `TavilySearchResults` tool is integrated to provide the research agent with robust, real-time web search capabilities.
 - `Pydantic` & `TypedDict`: Python's `TypedDict` is used to define the state schema (`AgentState`) that is passed between the different nodes and agents in the graph.
 - `Rich`: For enhanced notebook output and visualization.
