@@ -1,6 +1,30 @@
 ## Agent/Workflow Projects
 
 
+**[Deep Agents with LangGraph](./deep_agents)**
+
+This project builds an advanced, stateful AI agent from scratch using **LangGraph**. It demonstrates key architectural patterns that create robust, "Deep Agents" capable of overcoming the limitations of simple, stateless agent loops.
+
+The core idea is to build an agent that can handle complex, long-running tasks by addressing three major challenges:
+1.  **Planning & Task Management:** Agents can "forget" their objectives in multi-step tasks. This is solved by implementing a **TODO list** in the agent's state, allowing it to create, track, and update its own plan.
+2.  **Context Window Limits:** An agent's context (the "prompt") is finite. This is solved with **Context Offloading**, where the agent uses a **virtual filesystem** (stored in its state) to save large pieces of data (like search results) and read them back only when needed.
+3.  **Context Contamination:** Mixing complex tasks (like research) with simple coordination (like planning) in one prompt can confuse the agent. This is solved with **Sub-Agent Delegation** (or Context Isolation), where a main "supervisor" agent spawns specialized, "worker" sub-agents to perform complex tasks in their own isolated environment.
+
+The final notebook combines all these patterns into a single "Deep Agent" that can plan, delegate research, offload findings to its internal filesystem, and use those findings to answer a user's request.
+
+**Libraries:**
+
+- `langgraph`: The core library for building the agent as a stateful graph. It provides `create_react_agent`, `AgentState`, `Command`, and `InjectedState` to define the agent's logic and memory.
+- `langchain_core`: Used for foundational components, including message types (`HumanMessage`, `ToolMessage`), the `@tool` decorator, and schema definitions (`TypedDict`).
+- `langchain`: Used for initializing the LLM (`init_chat_model`).
+- `langchain-google-genai`: The specific provider used to run Google's `gemini-2.5-flash` model.
+- `langsmith`: Used for tracing and debugging the agent's execution. The notebooks include links to example traces.
+- `tavily-python`: The client library for the Tavily search API, used by the `tavily_search` tool in the final agent.
+- `httpx`: A modern HTTP client used by the search tool to fetch raw webpage content.
+- `markdownify`: A utility to convert the fetched HTML from websites into clean Markdown for the LLM to read.
+- `rich`: A Python library for rich text and beautiful formatting in the terminal, used by `utils.py` to display the agent's steps clearly.
+- `python-dotenv`: Used at the beginning of each notebook to load API keys (like `GOOGLE_API_KEY`) from a `.env` file.
+
 
 **[Email Assistant with LangGraph](./ambient_agent)**
 
